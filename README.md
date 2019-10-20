@@ -1,8 +1,9 @@
 # Console.log() with styles
+![Image of Yaktocat](img/console.style.jpg)
 
 ## How to Install
 ``` HTML
-<script src="console.style.js"></script>
+<script src="console.style.min.js"></script>
 ```
 
 ## How to use
