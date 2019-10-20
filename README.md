@@ -1,4 +1,4 @@
-# JS Console.log() with styles
+# Console.log() with styles
 
 ## How to Install
 ``` HTML
@@ -9,33 +9,41 @@
 
 ### Italic
 ``` javascript
-Console.italic("This is Italic");
+Console.italic("Line Italic");
 ```
+![Browser Console](img/console.italic.png)
+
 
 ### Bold
 ``` javascript
-Console.bold("This is Bold");
+Console.bold("Line Bold");
 ```
+![Browser Console](img/console.bold.png)
+
 
 ### Underline
 ``` javascript
-Console.underline("This is underline");
+Console.underline("Line underline");
 ```
+![Browser Console](img/console.underline.png)
+
 
 ### Text Red
 ``` javascript
-Console.red("This is text is red");
+Console.red("Line red");
 ```
+![Browser Console](img/console.red.png)
+
 
 ### Text Blue
 ``` javascript
-Console.blue("This is text is blue");
+Console.blue("Line blue");
 ```
+![Browser Console](img/console.blue.png)
+
 
 ### Text Green
 ``` javascript
-Console.green("This is text is green");
+Console.green("Line green");
 ```
-
-
-
+![Browser Console](img/console.green.png)
