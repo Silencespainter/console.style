@@ -7,7 +7,7 @@
 ```
 
 ## How to use
-Don't forget use first letter **C** with uppercase `Console.option("text");`
+Don't forget use first letter **C** uppercase `Console.option(value);`
 
 
 ## Console by type
