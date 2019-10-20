@@ -6,44 +6,82 @@
 ```
 
 ## How to use
+Don't forget use first letter **C** with uppercase `Console.option("text");`
+
+
+## Console by type
+
+### Success
+``` javascript
+Console.success("Line type Success");
+```
+
+
+### Info
+``` javascript
+Console.info("Line type Info");
+```
+
+
+### Warning
+``` javascript
+Console.warning("Line type warning");
+```
+
+
+### Error
+``` javascript
+Console.error("Line type error");
+```
+
+
+## Console by Format
 
 ### Italic
 ``` javascript
 Console.italic("Line Italic");
 ```
-![Browser Console](img/console.italic.png)
 
 
 ### Bold
 ``` javascript
 Console.bold("Line Bold");
 ```
-![Browser Console](img/console.bold.png)
 
 
 ### Underline
 ``` javascript
 Console.underline("Line underline");
 ```
-![Browser Console](img/console.underline.png)
 
 
 ### Text Red
 ``` javascript
 Console.red("Line red");
 ```
-![Browser Console](img/console.red.png)
-
 
 ### Text Blue
 ``` javascript
 Console.blue("Line blue");
 ```
-![Browser Console](img/console.blue.png)
-
 
 ### Text Green
 ``` javascript
 Console.green("Line green");
 ```
-![Browser Console](img/console.green.png)
+
+## Console Nerd
+
+### Poo
+``` javascript
+Console.poo("Nerd Time: poo");
+```
+
+### Gandalf
+``` javascript
+Console.gandalf("Nerd Time: gandalf");
+```
+### WonderWoman
+``` javascript
+Console.wonderwoman("Nerd Time: wonderwoman");
+```
