@@ -31,7 +31,7 @@ Console.info("Line type Info");
 ### Warning
 
 ```javascript
-Console.warning("Line type warning");
+Console.warn("Line type warning");
 ```
 
 ### Error
