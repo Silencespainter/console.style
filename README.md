@@ -2,6 +2,8 @@
 
 ![Image](img/console.style.jpg)
 
+DEMO: https://silencespainter.github.io/console.cool/.
+
 ## How to Install
 
 ```HTML
