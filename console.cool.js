@@ -1,119 +1,83 @@
-Console = (function(value) {
-  let icon = "";
-  const options = {};
-	const fontFamily = "font-family: Arial";
-	const fontFamilyHeading = "font-family: Georgia, serif, sans-serif";
-  const styles = {
-    bold: ["font-weight: bold", fontFamily],
-    italic: ["font-style: italic", fontFamily],
-    underline: ["text-decoration: underline", fontFamily],
-    uppercase: ["text-transform: uppercase", fontFamily],
-    strikethrough: ["text-decoration: line-through", fontFamily],
-    red: ["color: red", fontFamily],
-    blue: ["color: blue", fontFamily],
-    green: ["color: green", fontFamily],
-    success: [
-      "background-color: LightGreen",
-      "color: green",
-			"padding:4px 8px",
-			"border-radius:2px",
-      fontFamily
-    ],
-    info: [
-      "background-color: LightSkyBlue",
-      "color: darkblue",
-      "padding:4px 8px",
-      "border-radius:2px",
-      fontFamily
-    ],
-    warn: [
-      "background-color: yellow",
-      "color:  black",
-      "padding:4px 8px",
-      "border-radius:2px",
-      fontFamily
-    ],
-    error: [
-      "background-color: red",
-      "color: white",
-      "padding:4px 8px",
-      "border-radius:2px",
-      fontFamily
-    ],
-		h1: [
-			"font-size: 24px",
-			"font-weight: bold",
-      fontFamilyHeading
-		],
-		h2: [
-			"font-size: 20px",
-			"font-weight: bold",
-      fontFamilyHeading
-		],
-		h3: [
-			"font-size: 16px",
-			"font-weight: bold",
-      fontFamilyHeading
-		],
-		poo: [
-      "background-color: wheat",
-      "border: 2px solid brown",
-      "color: brown",
-      "padding:4px 8px",
-			"border-radius:2px",
-			"font-size: 20px",
-      fontFamily
-		],
-		gandalf: [
-      "background-color: PowderBlue",
-      "border: 2px solid darkblue",
-      "color: darkblue",
-      "padding:4px 8px",
-			"border-radius:2px",
-			"font-size: 20px",
-      fontFamily
-		],
-		wonderwoman: [
-			"background-color: white",
-			"border: 1px solid purple",
-			"color: purple",
-			"padding:4px 16px 4px 8px",
-			"border-radius:2px 10px 10px 2px",
-			"font-size: 20px",
-      fontFamily
-		]
-  };
+const FORMAT = {
+    bold: "font-weight: bold",
+    italic: "font-style: italic",
+    underline: "text-decoration: underline",
+    uppercase: "text-transform: uppercase",
+    strikethrough: "text-decoration: line-through",
+    fontDefault: "font-family: Console, Arial, sans-serif",
+    fontHeading: "font-family: Georgia, serif, sans-serif",
+    size: "font-size: 14px",
+    sizeM: "font-size: 16px",
+    sizeL: "font-size: 24px",
+    sizeXL: "font-size: 32px",
+    borderRadius: "border-radius: 2px",
+    padding: "padding:4px 8px",
+    border: "border: 1px solid currentColor",
+};
 
-  Object.keys(styles).forEach(function(key, index) {
-    options[key] = function(value) {
-      switch (key) {
-        case "success":
-          icon = "💚 ";
-          break;
-        case "info":
-          icon = "💡 ";
-          break;
-        case "warning":
-          icon = "🔔 ";
-          break;
-        case "error":
-          icon = "💣 ";
-          break;
-        case "poo":
-          icon = "💩 ";
-					break;
-				case "gandalf":
-					icon = "🧙 ";
-					break;
-				case "wonderwoman":
-					icon = "🦸‍ "
-					break;
-        default:
-          icon = " ";
-      }
-      console.log("%c" + icon + value, styles[key].join(";"));
+const COLOR = {
+    info: "blue",
+    infoDark: "darkblue",
+    infoLight: "LightSkyBlue",
+    warning: "yellow",
+    warningDark: "orange",
+    error: "red",
+    errorDark: "DarkRed",
+    success: "green",
+    successDark: "DarkGreen",
+    successLight: "LightGreen",
+    white: "#FFF",
+    black: "#333",
+    brown: "wheat",
+    brownDark: "brown",
+    purple: "purple",
+};
+
+const GLOBAL = {
+    format: `${FORMAT.fontDefault}; ${FORMAT.size};`,
+    status: `${FORMAT.borderRadius}; ${FORMAT.fontDefault}; ${FORMAT.padding}; ${FORMAT.sizeM};`,
+    nerd: `${FORMAT.borderRadius}; ${FORMAT.fontDefault}; ${FORMAT.padding}; ${FORMAT.sizeM};`,
+
+};
+
+const STYLES = {
+    bold: [FORMAT.bold, `${GLOBAL.format}`],
+    italic: [FORMAT.italic, `${GLOBAL.format}`],
+    underline: [FORMAT.underline, `${GLOBAL.format}`],
+    uppercase: [FORMAT.uppercase, `${GLOBAL.format}`],
+    strikethrough: [FORMAT.strikethrough, `${GLOBAL.format}`],
+    red: [`color: ${COLOR.error}`, `${GLOBAL.format}`],
+    blue: [`color: ${COLOR.info}`, `${GLOBAL.format}`],
+    green: [`color: ${COLOR.success}`, `${GLOBAL.format}`],
+    success: [`background-color: ${COLOR.successLight}`, `color: ${COLOR.success}`,  `${GLOBAL.status}`],
+    info: [`background-color: ${COLOR.infoLight}`, `color: ${COLOR.infoDark}`, `${GLOBAL.status}`   ],
+    warning: [`background-color: ${COLOR.warning}`, `color: ${COLOR.black}`, `${GLOBAL.status}`  ],
+    error: [`background-color: ${COLOR.error}`, `color: ${COLOR.white}`, `${GLOBAL.status}`  ],
+    h1: [FORMAT.sizeXL, FORMAT.bold, FORMAT.fontHeading],
+    h2: [FORMAT.sizeL, FORMAT.bold, FORMAT.fontHeading],
+    h3: [FORMAT.sizeM, FORMAT.bold, FORMAT.fontHeading],
+    poo: [`background-color: ${COLOR.brown}`, `color: ${COLOR.brownDark}`, `${GLOBAL.nerd}`],
+    gandalf: [`background-color: ${COLOR.infoLight}`, `color: ${COLOR.infoDark}`, `${GLOBAL.nerd}`],
+    wonderwoman: [`background-color: ${COLOR.purple}`, `color: ${COLOR.white}`, `${GLOBAL.nerd}`],
+};
+
+const ICON = {
+    success: `💚 `,
+    info: `💡 `,
+    warning: `🔔 `,
+    error: `💣 `,
+    poo: `💩 `,
+    gandalf: `🧙 `,
+    wonderwoman: `🦸‍ `,
+};
+
+const Console = {};
+
+Object.keys(STYLES).forEach((key) => {
+    Console[key] = function (content) {
+        const _icon = ICON[key] || ` `;
+        console.log(`%c` + _icon + content, STYLES[key].join(`;`));
     };
-  });
+});
 
-  return options;
-})();
+export default Console;

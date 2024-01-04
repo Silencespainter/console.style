@@ -1,99 +1,118 @@
-# CONSOLE COOL - Console.log() with styles
+# console-cool
 
-![Image](img/console.style.jpg)
+![alt logo content](./assets/content.jpg)
 
-DEMO: https://silencespainter.github.io/console.cool/.
+`Console.cool` is a JavaScript library designed to enhance and customize the debugging and logging experience in the browser console. It provides several functions and styles that go beyond the standard JavaScript console capabilities, allowing developers to not only debug their code more effectively, but also to do so in a visually appealing and organized manner.
 
-## How to Install
 
-```HTML
-<script src="console.cool.min.js"></script>
-```
-
-## How to use
+## How use
 
 Don't forget use first letter **C** uppercase `Console.option(value);`
 
-## Console by type
+``` js
+// Don't forget uppercase in the first letter
+import Console from './console.cool.js';
+```
 
-### Success
+## Status Console
+
+**Success**
+
+![alt success](./assets/success.png)
 
 ```javascript
 Console.success("Line type Success");
 ```
 
-### Info
+**Info**
+
+![alt info](./assets/info.png)
 
 ```javascript
 Console.info("Line type Info");
 ```
+**Warning**
 
-### Warning
+![alt Warning](./assets/warning.png)
+
 
 ```javascript
 Console.warn("Line type warning");
 ```
 
-### Error
+**Error**
+
+![alt error](./assets/error.png)
+
+
+## Format Console
+
+![alt all formats](./assets/format.png)
 
 ```javascript
 Console.error("Line type error");
 ```
 
-## Console by Format
-
-### Italic
+**Italic**
 
 ```javascript
 Console.italic("Line Italic");
 ```
 
-### Bold
+**Bold**
 
 ```javascript
 Console.bold("Line Bold");
 ```
 
-### Underline
+**Underline**
 
 ```javascript
 Console.underline("Line underline");
 ```
 
-### Text Red
+**Text Red**
 
 ```javascript
 Console.red("Line red");
 ```
 
-### Text Blue
+**Text Blue**
 
 ```javascript
 Console.blue("Line blue");
 ```
 
-### Text Green
+**Text Green**
 
 ```javascript
 Console.green("Line green");
 ```
 
-## Console Nerd
+## Nerd Console
 
-### Poo
+**Poo**
+
+![alt poo](./assets/poo.png)
 
 ```javascript
 Console.poo("Nerd Time: poo");
 ```
 
-### Gandalf
+**Gandalf**
+
+![alt gandalf](./assets/gandalf.png)
 
 ```javascript
 Console.gandalf("Nerd Time: gandalf");
 ```
 
-### WonderWoman
+**WonderWoman**
+
+![alt wonderwoman](./assets/ww.png)
 
 ```javascript
 Console.wonderwoman("Nerd Time: wonderwoman");
 ```
+
+

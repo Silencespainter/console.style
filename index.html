@@ -1,73 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP7/AAD8fwAAwAcAAMAHAACMYwAADWEAAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
-    <title>Console Cool</title>
-  </head>
-  <body>
-    <script src="console.cool.min.js"></script>
-    <script>
-      Console.success('Console.success("Line type success")');
-      Console.info('Console.info("Line type info")');
-      Console.warn('Console.warn("Line type warning")');
-      Console.error('Console.error("Line type error")');
 
-      console.log("");
-      console.log("");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP7/AAD8fwAAwAcAAMAHAACMYwAADWEAAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      Console.italic('Console.italic("Line type italic")');
-      Console.bold('Console.bold("Line type bold")');
-      Console.underline('Console.bold("Line type underline")');
-      Console.red('Console.red("Line red")');
-      Console.blue('Console.blue("Line blue")');
-      Console.green('Console.green("Line green")');
+    body {
+      text-align: center;
+      background-color: #282828;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      console.log("");
-      console.log("");
+    a {
+      color: white;
+    }
 
-      Console.poo('Console.poo("Nerd Time: poo")');
-      Console.gandalf('Console.gandalf("Nerd Time: gandalf")');
-      Console.wonderwoman('Console.green("Nerd Time: wonderwoman")');
-    </script>
-    <style>
-      * {
-        box-sizing: border-box;
+    h1,
+    h2,
+    small {
+      display: block;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    small {
+      padding: 20px 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    h1 {
+      font-size: 4em;
+      background-image: linear-gradient(60deg, #E21143, #FFB03A);
+      background-clip: text;
+      color: transparent;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25em;
+      max-width: 100vw;
+    }
+
+    .githubCorner:hover .githubCornerArm {
+      -webkit-animation: AnimaGithubCornerArm 560ms ease-in-out;
+      animation: AnimaGithubCornerArm 560ms ease-in-out;
+    }
+
+    @media (max-width: 500px) {
+      .githubCorner:hover .githubCornerArm {
+        -webkit-animation: none;
+        animation: none;
       }
-      body {
-        text-align: center;
-        background-color: #333;
-        color: white;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        padding: 20px;
-        min-width: calc(100% - 40px);
-        min-height: calc(100vh - 40px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center
+
+      .githubCorner .githubCornerArm {
+        -webkit-animation: AnimaGithubCornerArm 560ms ease-in-out;
+        animation: AnimaGithubCornerArm 560ms ease-in-out;
       }
-      a {
-          color: white;
+    }
+
+    @-webkit-keyframes AnimaGithubCornerArm {
+
+      0%,
+      100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
       }
-     
-      h1,
-      h2,
-      small {
-        display: block;
-        width: 100%;
-        max-width: 980px;
-        margin: 0 auto;
+
+      20%,
+      60% {
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
       }
-      small {
-          padding: 20px 0;
+
+      40%,
+      80% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
       }
-    </style>
+    }
+
+    @keyframes AnimaGithubCornerArm {
+
+      0%,
+      100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      20%,
+      60% {
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+      }
+
+      40%,
+      80% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+      }
+    }
+  </style>
+  <title>Console Cool</title>
+</head>
+
+<body>
+  <script type="module">
+    import Console from './console.cool.js';
+    console.log(`
+      *** FORMAT ***
+      `)
+    Console.italic('Console.italic()');
+    Console.bold('Console.bold()');
+    Console.underline('Console.underline()');
+    Console.strikethrough('Console.strikethrough()');
+    Console.red('Console.red()');
+    Console.blue('Console.blue()');
+    Console.green('Console.green()');
+
+    console.log(`
+      *** STATUS ***
+      `)
+    Console.success('Console.success()');
+    Console.info('Console.info()');
+    Console.warning('Console.warning()');
+    Console.error('Console.error()');
+
+
+
+
+    console.log(`
+      *** SIZE ***
+      `)
+    Console.h1('Console.h1()');
+    Console.h2('Console.h2()');
+    Console.h3('Console.h3()');
+
+
+    console.log(`
+      *** NERD ***
+      `)
+    Console.poo('Console.poo()');
+    Console.gandalf('Console.gandalf()');
+    Console.wonderwoman('Console.wonderwoman()');
+  </script>
+  <header>
+    <img src="./assets/content.jpg" aria-hidden="true">
     <h1>Console Cool</h1>
     <h2>If you beleve in magic, Open the console of your modern browser</h2>
-    <small>More in <a href="https://github.com/Silencespainter/console.cool">https://github.com/Silencespainter/console.cool</a></small>
-    </pre>
-  </body>
+    <small>More in <a href="https://github.com/Silencespainter/console.cool">https://github.com/nandovejer/console.cool</a></small>
+  </header>
+  <style>
+    .githubCorner:hover>svg {
+      fill: blue;
+    }
+
+    .githubCorner:hover .githubArm {
+      -webkit-animation: animaGithubCornerArm 560ms ease-in-out;
+      animation: animaGithubCornerArm 560ms ease-in-out;
+    }
+
+    @-webkit-keyframes animaGithubCornerArm {
+
+      0%,
+      100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      20%,
+      60% {
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+      }
+
+      40%,
+      80% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+      }
+    }
+
+    @keyframes animaGithubCornerArm {
+
+      0%,
+      100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      20%,
+      60% {
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+      }
+
+      40%,
+      80% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+      }
+    }
+  </style>
+  <a target="_blank" href="https://github.com/nandovejer/console.cool" class="githubCorner">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="color:#fff; position: absolute; top: 0; border: 0; right: 0;">
+      <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+      <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="githubArm"></path>
+      <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+  </a>
+</body>
+
 </html>
