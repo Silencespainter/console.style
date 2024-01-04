@@ -1,6 +1,6 @@
 # console-cool
 
-![alt logo content](./assets/content.jpg)
+![alt logo content](./assets/content.png)
 
 `Console.cool` is a JavaScript library designed to enhance and customize the debugging and logging experience in the browser console. It provides several functions and styles that go beyond the standard JavaScript console capabilities, allowing developers to not only debug their code more effectively, but also to do so in a visually appealing and organized manner.
 
